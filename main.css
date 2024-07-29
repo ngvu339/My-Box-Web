@@ -1,0 +1,41 @@
+.toggle::before {
+    background-color:  #ffc409;
+    height: 625em;
+    outline: .25em dotted #ffc409;
+    outline-offset: .125em;
+    left: 7em;
+    top:7em;
+    width: 625em;
+
+}
+input:checked~.toggle span {
+    left: 2em;
+}
+.sr-only {
+    position: absolute;
+    left:  -9999px;
+    opacity: 0;
+
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    transition: background-color .25s;
+    color: #0f0f0f;
+    background: linear-gradient(to bottom right, #fdf3f4 25%, #070707 50%, #0e0e0e 5%, #01072a);
+    background-size: 300% 300%;
+    background-position:  top left;
+    transition: background-position .5s;
+}
+body,
+html{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+body:has(#darkmode-toggle:checked) {
+    background-position: 100% 100%;
+    color: #ffffff;
+}
+
